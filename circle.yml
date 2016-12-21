@@ -1,0 +1,23 @@
+general:
+    branches:
+        only:
+            - proversity/production
+
+machine:
+  environment:
+    NODE_ENV: production
+
+dependencies:
+  override:
+    - sudo apt-get install python-dev
+    - sudo pip install awsebcli==3.7.4
+
+test:
+  override:
+    - sleep 1
+
+deployment:
+  elasticbeanstalk:
+    branch: proversity/production
+    commands:
+      - eb deploy

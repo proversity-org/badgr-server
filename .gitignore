@@ -28,3 +28,6 @@ breakdown/static/css/*.map
 build/badgebook/
 
 test.cache/
+
+.elasticbeanstalk/logs
+venv/

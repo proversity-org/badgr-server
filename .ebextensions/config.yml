@@ -1,0 +1,11 @@
+branch-defaults:
+  master:
+    environment: badgr
+    group_suffix: null
+global:
+  application_name: badgr
+  default_ec2_keyname: proversity-eu-west-1
+  default_platform: Python
+  default_region: eu-west-1
+  profile: eb-cli
+  sc: git
