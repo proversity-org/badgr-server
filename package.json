@@ -13,9 +13,7 @@
   "dependencies": {
     "react": "0.13.x",
     "lodash": "~3.10.0",
-    "component-styleguide": "~1.3.1"
-  },
-  "devDependencies": {
+    "component-styleguide": "~1.3.1",
     "browser-sync": "latest",
     "browserify": "~7.0.2",
     "component-styleguide": "^1.2.2",
