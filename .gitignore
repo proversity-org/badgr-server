@@ -1,5 +1,4 @@
 *.pyc
-settings_local.py
 .*.sw*
 *~
 .DS_Store
