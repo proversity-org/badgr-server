@@ -8,8 +8,10 @@ machine:
     NODE_ENV: production
 
 dependencies:
+  pre:
+    - sudo apt-get update -y
   override:
-    - sudo apt-get install python-dev
+    - sudo apt-get install -y python-dev
     - sudo pip install awsebcli==3.7.4
 
 test:
