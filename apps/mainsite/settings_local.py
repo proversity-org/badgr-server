@@ -80,7 +80,7 @@ EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'proversitysmtp'
 EMAIL_HOST_PASSWORD = '5RzLPy9qCJhCTA%2haqS'
-EMAIL_USE_TLS: True
+EMAIL_USE_TLS = True
 
 # EMAIL_BACKEND = 'django_ses.SESBackend'
 
