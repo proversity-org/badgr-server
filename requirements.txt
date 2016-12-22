@@ -83,6 +83,5 @@ pycparser==2.14
 six==1.9.0
 
 #svg 2 png support
-cairocffi==0.7.2
 CairoSVG==1.0.22
 
