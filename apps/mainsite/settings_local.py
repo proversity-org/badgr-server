@@ -64,10 +64,8 @@ ROOT_INFO_REDIRECT = '/login'
 # }
 
 
-#LTI_OAUTH_CREDENTIALS = {
-#    'test': 'secret',
-#    'test2': 'reallysecret'
-#}
+LTI_OAUTH_CREDENTIALS = {}
+LTI_OAUTH_CREDENTIALS[os.environ.get('LTI_OAUTH_CLIENT_ID', 'test')] = os.environ.get('LTI_OAUTH_SECRET_KEY', 'secret')
 
 
 # Run celery tasks in same thread as webserver
