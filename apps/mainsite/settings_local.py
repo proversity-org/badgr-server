@@ -122,10 +122,10 @@ LOGGING = {
             'filename': os.path.join(LOGS_DIR, 'badgr_events.log')
         },
 
-        'console': {
+        'catchall': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': os.path.join(LOGS_DIR, 'console_events.log')
+            'filename': os.path.join(LOGS_DIR, 'catchall.log')
 
         }
     },
@@ -133,16 +133,21 @@ LOGGING = {
         'django.request': {
             'handlers': ['mail_admins'],
             'level': 'ERROR',
-            'propagate': True,
+            'propagate': True
         },
 
         # Badgr.Events emits all badge related activity
         'Badgr.Events': {
             'handlers': ['badgr_events'],
             'level': 'INFO',
-            'propagate': False,
+            'propagate': False
 
         },
+
+        '': {
+            'handlers': ['catchall'],
+            'propagate': True
+        }
     },
     'formatters': {
         'default': {
