@@ -39,6 +39,8 @@ CACHES = {
 }
 
 
+WSGI_APPLICATION = 'apps.mainsite.wsgi.application'
+
 
 # celery
 BROKER_URL = 'amqp://localhost:5672/'
