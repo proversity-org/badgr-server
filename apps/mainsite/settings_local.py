@@ -69,8 +69,6 @@ ROOT_INFO_REDIRECT = '/login'
 #    'test2': 'reallysecret'
 #}
 
-LOGS_DIR = TOP_DIR + '/logs'
-
 
 # Run celery tasks in same thread as webserver
 CELERY_ALWAYS_EAGER = True
@@ -101,12 +99,11 @@ DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', 'noreply@proversity.io
 #)
 #DEBUG_TOOLBAR_CONFIG = {'INTERCEPT_REDIRECTS': False}
 
+LOGS_DIR = os.environ.get('LOGS_DIR', os.path.join(TOP_DIR, 'logs'))
 
-
-
-LOGS_DIR = os.path.join(TOP_DIR, 'logs')
 if not os.path.exists(LOGS_DIR):
     os.makedirs(LOGS_DIR)
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
