@@ -120,6 +120,13 @@ LOGGING = {
             'formatter': 'json',
             'class': 'logging.FileHandler',
             'filename': os.path.join(LOGS_DIR, 'badgr_events.log')
+        },
+
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(LOGS_DIR, 'console_events.log')
+
         }
     },
     'loggers': {
@@ -135,8 +142,7 @@ LOGGING = {
             'level': 'INFO',
             'propagate': False,
 
-        }
-
+        },
     },
     'formatters': {
         'default': {
