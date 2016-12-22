@@ -74,7 +74,14 @@ LTI_OAUTH_CREDENTIALS[os.environ.get('LTI_OAUTH_CLIENT_ID', 'test')] = os.enviro
 CELERY_ALWAYS_EAGER = True
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'proversitysmtp'
+EMAIL_HOST_PASSWORD = '5RzLPy9qCJhCTA%2haqS'
+EMAIL_USE_TLS: True
+
 # EMAIL_BACKEND = 'django_ses.SESBackend'
 
 # These are optional -- if they're set as environment variables they won't
