@@ -28,6 +28,7 @@ Prerequisites:
 * CentOS 7.x (install packages with yum): git, git-core, python-virtualenv, gcc, python-pip, python-devel, libjpeg-turbo, libjpeg-turbo-devel, zlib-devel, mariadb-devel, openldap-devel, cyrus-sasl-devel, swig, libxslt-devel, automake, autoconf, libtool, libffi-devel
 
 Note: some of these packages would introduce additional security considerations if left installed on a server used in production.
+Note: You **MUST** add the following to the httpd.conf ```WSGIPassAuthorization On``` or you will not be able to access the api since mod_wsgi strips information from your request headers. 
 
 ### Create project directory and environment
 
