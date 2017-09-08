@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     # deprecated packages to remove in v1.2
     'composer',
     'credential_store',
+    'storages',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -127,6 +128,22 @@ JINGO_EXCLUDE_APPS = (
 #
 ##
 
+
+#AMAZON SETTINGS
+
+AWS_HEADERS = {  # see http://developer.yahoo.com/performance/rules.html#expires
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'Cache-Control': 'max-age=94608000',
+    }
+
+
+
+#STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+
+STATICFILES_LOCATION = 'static'
+STATICFILES_STORAGE = 'issuer.custom_storages.StaticStorage'
+
+
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
@@ -185,9 +202,10 @@ CORS_MODEL = 'mainsite.BadgrApp'
 ##
 
 MEDIA_ROOT = os.path.join(TOP_DIR, 'mediafiles')
-MEDIA_URL = '/media/'
 ADMIN_MEDIA_PREFIX = STATIC_URL+'admin/'
 
+MEDIAFILES_LOCATION = 'media'
+DEFAULT_FILE_STORAGE = 'issuer.custom_storages.MediaStorage'
 
 ##
 #
