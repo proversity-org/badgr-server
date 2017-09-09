@@ -53,7 +53,7 @@ var StudioOptionList = React.createClass({
 
                 var img;
                 if (asset) {
-                    img = (<img src={"/static/badgestudio/"+ this.props.tab +"/"+ asset} width="100" height="100" />);
+                    img = (<img src={"{{ STATIC_URL }}static/badgestudio/"+ this.props.tab +"/"+ asset} width="100" height="100" />);
                 } else {
                     img = "None";
                 }
