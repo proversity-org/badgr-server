@@ -202,7 +202,7 @@ var App = React.createClass({
         <div className="x-owner">
             <header className="header_ l-wrapper">
             <a className="header_-x-logo" href="/">
-                <img src="/static/images/header-logo.svg" width="193" height="89" />
+                <img src="https://badgr.s3-eu-west-1.amazonaws.com/images/header-logo.svg" width="193" height="89" />
             </a>
             <nav>
                 <TopLinks
