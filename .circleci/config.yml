@@ -13,6 +13,9 @@ jobs:
           name: apt-get install python dev
           command: 'sudo apt-get install python-dev --fix-missing'
       - run:
+          name: install pip
+          command: 'sudo apt-get -y install python-pip'
+      - run:
           name: apt-get aws eb cli
           command: 'sudo pip install awsebcli --upgrade'
       - deploy:
