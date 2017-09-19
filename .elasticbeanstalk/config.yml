@@ -7,5 +7,5 @@ global:
   default_ec2_keyname: proversity-eu-west-1
   default_platform: Python2.7
   default_region: eu-west-1
-  profile: deployer
+  profile: eb-cli
   sc: git
