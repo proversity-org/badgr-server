@@ -1,0 +1,32 @@
+version: 2
+jobs:
+  build_production:
+    docker:
+      - image: circleci/node:6.10
+    working_directory: ~/badgr-server
+    steps:
+      - checkout
+      - run:
+          name: apt-get update
+          command: 'sudo apt-get update -y'
+      - run:
+          name: apt-get install python dev
+          command: 'sudo apt-get install -y python-dev'
+      - run:
+          name: apt-get aws eb cli
+          command: 'sudo pip install awsebcli --upgrade'
+      - deploy:
+          name: Deploy to Elastic Beanstalk
+          command: |
+            eb use badgr
+            eb deploy
+      
+
+workflows:
+  version: 2
+  deploy:
+    jobs:
+      - build_production:
+          filters:
+            branches:
+              only: proversity/production
