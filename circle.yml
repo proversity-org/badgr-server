@@ -22,5 +22,4 @@ deployment:
   elasticbeanstalk:
     branch: proversity/production
     commands:
-      - eb use badgr
-      - eb deploy
+      - eb deploy badgr
