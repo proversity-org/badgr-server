@@ -11,7 +11,9 @@ jobs:
           command: 'sudo apt-get update -y'
       - run:
           name: apt-get install python dev
-          command: 'sudo apt-get install python-dev --fix-missing'
+          command: |
+            sudo apt-get install python-dev --fix-missing
+            sudo apt-get install libevent-dev
       - run:
           name: install pip
           command: 'sudo apt-get -y install python-pip'
