@@ -16,7 +16,7 @@ jobs:
           name: install pip
           command: 'sudo apt-get -y install python-pip'
       - run:
-          name: apt-get aws eb cli
+          name: install aws eb cli
           command: 'sudo pip install awsebcli --upgrade'
       - deploy:
           name: Deploy to Elastic Beanstalk
