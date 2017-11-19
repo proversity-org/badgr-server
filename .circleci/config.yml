@@ -13,7 +13,6 @@ jobs:
           name: apt-get install python dev
           command: |
             sudo apt-get install build-essential python-dev libssl-dev libevent-dev --fix-missing
-            sudo apt-get install gcc gcc-c++ kernel-devel
             sudo apt-get install python-devel libxslt-devel libffi-devel openssl-devel
       - run:
           name: install pip
