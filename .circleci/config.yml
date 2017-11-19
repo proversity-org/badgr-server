@@ -21,7 +21,7 @@ jobs:
       - deploy:
           name: Deploy to Elastic Beanstalk
           command: |
-            eb deploy badgr
+            eb deploy badgr-server
       
 
 workflows:
