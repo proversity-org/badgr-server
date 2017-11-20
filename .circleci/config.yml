@@ -10,9 +10,6 @@ jobs:
           name: apt-get update
           command: 'sudo apt-get update -y'
       - run:
-          name: set new compilers
-          command: 'update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 50 && update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 50'
-      - run:
           name: apt-get install python dev
           command: 'sudo apt-get install python-dev --fix-missing'
       - run:
