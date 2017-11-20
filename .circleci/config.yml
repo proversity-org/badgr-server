@@ -20,7 +20,7 @@ jobs:
           name: install aws eb cli
           command: 'sudo pip install awsebcli --upgrade'
       - deploy:
-          name: Deploy to Elastic Beanstalk
+          name: Deploy to Elastic  Beanstalk
           command: |
             eb deploy badgr-server
       
