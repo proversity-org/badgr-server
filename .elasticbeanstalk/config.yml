@@ -1,10 +1,10 @@
 branch-defaults:
-  proversity/production:
-    environment: badgr-server
+  proversity/staging:
+    environment: BadgrTest-env
     group_suffix: null
 global:
-  application_name: badgr
+  application_name: badgr test
   default_ec2_keyname: proversity-eu-west-1
   default_platform: Python2.7
-  default_region: eu-west-1
+  default_region: us-east-1
   sc: git

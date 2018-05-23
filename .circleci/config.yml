@@ -21,7 +21,7 @@ jobs:
       - deploy:
           name: Deploy to Elastic  Beanstalk
           command: |
-            eb deploy badgr-server
+            eb deploy BadgrTest-env
       
 
 workflows:
@@ -31,4 +31,4 @@ workflows:
       - build_production:
           filters:
             branches:
-              only: proversity/production
+              only: proversity/staging
